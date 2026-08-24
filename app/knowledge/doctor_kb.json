@@ -1,0 +1,26 @@
+[
+  {
+    "id": "doc_001",
+    "category": "clinical_triage",
+    "keywords": ["triage", "risk score", "fusion score", "anomaly", "clinical risk", "assessment"],
+    "content": "The AegisNet Risk Score (0-100) combines real-time accelerometer spectral energy, pulse oximetry trends, and historical risk factors. Scores >75 signal high risk of decompensation or acute event, warranting immediate clinical review."
+  },
+  {
+    "id": "doc_002",
+    "category": "prescription_management",
+    "keywords": ["prescribe", "dosage adjustment", "medication update", "pharmacy", "drug interaction"],
+    "content": "Physicians can modify prescription routines, update dosage frequencies, and review patient medication adherence directly from the Doctor Dashboard. Automated alerts highlight potential contraindications."
+  },
+  {
+    "id": "doc_003",
+    "category": "telemetry_reports",
+    "keywords": ["export", "excel report", "longitudinal data", "vitals history", "clinical records"],
+    "content": "Full longitudinal telemetry logs, including heart rate variability, SpO₂ distributions, and fall incident histories, can be exported as styled Excel health reports (.xlsx) for clinical integration and EHR backup."
+  },
+  {
+    "id": "doc_004",
+    "category": "emergency_override",
+    "keywords": ["override", "emergency dispatch", "ambulance", "hospital admission", "triage note"],
+    "content": "Doctors can initiate direct emergency escalation, override automated dispatch triage, and directly contact assigned community responders or hospital dispatch units during active emergencies."
+  }
+]

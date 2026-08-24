@@ -1,0 +1,32 @@
+[
+  {
+    "id": "pat_001",
+    "category": "vitals_spo2",
+    "keywords": ["spo2", "oxygen", "pulse oximeter", "breathing", "hypoxia", "sats"],
+    "content": "Normal SpO₂ levels range between 95% and 100%. An SpO₂ level below 90% is considered hypoxic and requires immediate medical attention. If you experience shortness of breath alongside SpO₂ below 92%, stay calm, sit upright, and press your emergency SOS button."
+  },
+  {
+    "id": "pat_002",
+    "category": "vitals_heart_rate",
+    "keywords": ["heart rate", "pulse", "bpm", "tachycardia", "bradycardia", "palpitations"],
+    "content": "A normal resting heart rate for adults ranges from 60 to 100 beats per minute (bpm). Resting rates consistently above 100 bpm (tachycardia) or below 50 bpm (bradycardia) without athletic training should be reviewed by your physician."
+  },
+  {
+    "id": "pat_003",
+    "category": "prescriptions_safety",
+    "keywords": ["dosage", "stop medication", "change dose", "side effects", "pill", "prescriptions"],
+    "content": "AegisNet safety policy strictly prohibits altering medication dosages or stopping prescribed treatments based on automated advice. Always consult your attending physician before modifying any prescription routine."
+  },
+  {
+    "id": "pat_004",
+    "category": "emergency_sos",
+    "keywords": ["sos", "fall", "chest pain", "faint", "emergency", "help", "panic"],
+    "content": "In case of severe symptoms such as crushing chest pain, sudden numbness, severe dizziness, or an accidental fall, hold down the red Emergency SOS button on your dashboard for 3 seconds to alert local community volunteers and emergency response dispatches."
+  },
+  {
+    "id": "pat_005",
+    "category": "privacy_data",
+    "keywords": ["privacy", "data sharing", "consent", "encryption", "anonymity"],
+    "content": "Your health data and sensor telemetry are encrypted end-to-end. You maintain full control over consent policies in the Privacy Panel, specifying which data points are visible to family guardians or medical providers."
+  }
+]

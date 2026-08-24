@@ -1,0 +1,1023 @@
+{
+    "patients": {
+        "savita.sharma@gmail.com": {
+            "id": "P001",
+            "email": "savita.sharma@gmail.com",
+            "profile": {
+                "id": "P001",
+                "name": "Savita Sharma",
+                "dob": "1951-01-01",
+                "age": 72,
+                "gender": "Female",
+                "phone": "+91 98765 43210",
+                "email": "savita.sharma@gmail.com",
+                "address": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
+                "emergency_location": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
+                "height": 172,
+                "weight": 77,
+                "bmi": 26.0,
+                "blood_group": "O+",
+                "conditions": "Mild Hypertension, Post-Stroke mobility tracking",
+                "allergies": "Penicillin",
+                "surgeries": "None logged",
+                "medications": "Amlodipine 5mg morning, Atorvastatin 10mg night",
+                "mobility_status": "Uses cane for outdoor walking",
+                "fall_history": "None",
+                "lifestyle": "Sedentary"
+            },
+            "contacts": [
+                {
+                    "name": "Rahul Sharma",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com"
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-101",
+            "risk_score": 12,
+            "status": "Stable",
+            "vitals": {
+                "heartRate": 74,
+                "spo2": 98,
+                "temperature": 36.6,
+                "activity": "Resting",
+                "respirationRate": 16,
+                "radarHeartRate": 73,
+                "radarRespiration": 16
+            }
+        },
+        "rajesh.kumar@gmail.com": {
+            "id": "P002",
+            "email": "rajesh.kumar@gmail.com",
+            "profile": {
+                "id": "P002",
+                "name": "Rajesh Kumar",
+                "dob": "1952-01-01",
+                "age": 67,
+                "gender": "Male",
+                "phone": "+91 91122 33445",
+                "email": "rajesh.kumar@gmail.com",
+                "address": "Flat 101, Om Residency, Sector 15, Vashi",
+                "emergency_location": "Flat 101, Om Residency, Sector 15, Vashi",
+                "height": 167,
+                "weight": 72,
+                "bmi": 25.8,
+                "blood_group": "O+",
+                "conditions": "Ischemic Heart Disease, Post-MI recovery",
+                "allergies": "Sulfa drugs",
+                "surgeries": "None logged",
+                "medications": "Aspirin 75mg daily, Metoprolol 25mg daily",
+                "mobility_status": "Ambulatory, gait variation observed",
+                "fall_history": "None",
+                "lifestyle": "Sedentary"
+            },
+            "contacts": [
+                {
+                    "name": "Guardian Monitor",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com"
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-102",
+            "risk_score": 91,
+            "status": "Critical",
+            "vitals": {
+                "heartRate": 112,
+                "spo2": 94,
+                "temperature": 36.8,
+                "activity": "Inactive",
+                "respirationRate": 16,
+                "radarHeartRate": 111,
+                "radarRespiration": 16
+            }
+        },
+        "ramesh.patel@gmail.com": {
+            "id": "P003",
+            "email": "ramesh.patel@gmail.com",
+            "profile": {
+                "id": "P003",
+                "name": "Ramesh Patel",
+                "dob": "1953-01-01",
+                "age": 74,
+                "gender": "Male",
+                "phone": "+91 92233 44556",
+                "email": "ramesh.patel@gmail.com",
+                "address": "A-12, Green Meadow Soc, Koparkhairane",
+                "emergency_location": "A-12, Green Meadow Soc, Koparkhairane",
+                "height": 174,
+                "weight": 79,
+                "bmi": 26.1,
+                "blood_group": "O+",
+                "conditions": "Type 2 Diabetes, Diabetic Neuropathy",
+                "allergies": "None",
+                "surgeries": "None logged",
+                "medications": "Metformin 500mg morning, Teneligliptin 20mg afternoon",
+                "mobility_status": "Ambulatory, experiences mild numbness",
+                "fall_history": "None",
+                "lifestyle": "Sedentary"
+            },
+            "contacts": [
+                {
+                    "name": "Guardian Monitor",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com"
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-103",
+            "risk_score": 56,
+            "status": "Monitor",
+            "vitals": {
+                "heartRate": 92,
+                "spo2": 95,
+                "temperature": 36.5,
+                "activity": "Walking",
+                "respirationRate": 16,
+                "radarHeartRate": 91,
+                "radarRespiration": 16
+            }
+        },
+        "lakshmi.iyer@gmail.com": {
+            "id": "P004",
+            "email": "lakshmi.iyer@gmail.com",
+            "profile": {
+                "id": "P004",
+                "name": "Lakshmi Iyer",
+                "dob": "1954-01-01",
+                "age": 80,
+                "gender": "Female",
+                "phone": "+91 93344 55667",
+                "email": "lakshmi.iyer@gmail.com",
+                "address": "Block C-34, Kalpataru Oasis, Sector 20, Kharghar",
+                "emergency_location": "Block C-34, Kalpataru Oasis, Sector 20, Kharghar",
+                "height": 165,
+                "weight": 60,
+                "bmi": 22.0,
+                "blood_group": "O+",
+                "conditions": "Osteoarthritis, Osteoporosis",
+                "allergies": "NSAIDs",
+                "surgeries": "None logged",
+                "medications": "Calcium Carbonate, Calcitriol supplements",
+                "mobility_status": "Uses walker indoors, slow ambulatory pace",
+                "fall_history": "None",
+                "lifestyle": "Sedentary"
+            },
+            "contacts": [
+                {
+                    "name": "Guardian Monitor",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com"
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-104",
+            "risk_score": 15,
+            "status": "Stable",
+            "vitals": {
+                "heartRate": 78,
+                "spo2": 97,
+                "temperature": 36.4,
+                "activity": "Resting",
+                "respirationRate": 16,
+                "radarHeartRate": 77,
+                "radarRespiration": 16
+            }
+        },
+        "gopinath.pillai@gmail.com": {
+            "id": "P005",
+            "email": "gopinath.pillai@gmail.com",
+            "profile": {
+                "id": "P005",
+                "name": "Gopinath Pillai",
+                "dob": "1955-01-01",
+                "age": 82,
+                "gender": "Male",
+                "phone": "+91 94455 66778",
+                "email": "gopinath.pillai@gmail.com",
+                "address": "Penthouse B, Sky Heights, Sector 8, Nerul",
+                "emergency_location": "Penthouse B, Sky Heights, Sector 8, Nerul",
+                "height": 167,
+                "weight": 62,
+                "bmi": 22.2,
+                "blood_group": "O+",
+                "conditions": "Moderate Dementia, Mild Hypertension",
+                "allergies": "Aspirin",
+                "surgeries": "None logged",
+                "medications": "Donepezil 5mg night, Telmisartan 40mg morning",
+                "mobility_status": "Supervised walking required",
+                "fall_history": "None",
+                "lifestyle": "Sedentary"
+            },
+            "contacts": [
+                {
+                    "name": "Guardian Monitor",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com"
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-105",
+            "risk_score": 88,
+            "status": "Critical",
+            "vitals": {
+                "heartRate": 0,
+                "spo2": 0,
+                "temperature": 0,
+                "activity": "Inactive",
+                "respirationRate": 0,
+                "radarHeartRate": 0,
+                "radarRespiration": 0
+            }
+        },
+        "ananya.rao@gmail.com": {
+            "id": "P006",
+            "email": "ananya.rao@gmail.com",
+            "profile": {
+                "id": "P006",
+                "name": "Ananya Rao",
+                "dob": "1956-01-01",
+                "age": 65,
+                "gender": "Female",
+                "phone": "+91 95566 77889",
+                "email": "ananya.rao@gmail.com",
+                "address": "402-A, Shree Hills, Sector 3, CBD Belapur",
+                "emergency_location": "402-A, Shree Hills, Sector 3, CBD Belapur",
+                "height": 165,
+                "weight": 70,
+                "bmi": 25.7,
+                "blood_group": "O+",
+                "conditions": "Stable Angina, High Cholesterol",
+                "allergies": "Contrast dye",
+                "surgeries": "None logged",
+                "medications": "Nitroglycerin sublingual PRN, Atorvastatin 20mg",
+                "mobility_status": "Fully ambulatory",
+                "fall_history": "None",
+                "lifestyle": "Sedentary"
+            },
+            "contacts": [
+                {
+                    "name": "Guardian Monitor",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com"
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-106",
+            "risk_score": 32,
+            "status": "Stable",
+            "vitals": {
+                "heartRate": 82,
+                "spo2": 98,
+                "temperature": 36.7,
+                "activity": "Resting",
+                "respirationRate": 16,
+                "radarHeartRate": 81,
+                "radarRespiration": 16
+            }
+        },
+        "vikram.mehta@gmail.com": {
+            "id": "P007",
+            "email": "vikram.mehta@gmail.com",
+            "profile": {
+                "id": "P007",
+                "name": "Vikram Mehta",
+                "dob": "1957-01-01",
+                "age": 71,
+                "gender": "Male",
+                "phone": "+91 96677 88990",
+                "email": "vikram.mehta@gmail.com",
+                "address": "Rowhouse 5, Palm Beach Gardens, Sanpada",
+                "emergency_location": "Rowhouse 5, Palm Beach Gardens, Sanpada",
+                "height": 171,
+                "weight": 76,
+                "bmi": 26.0,
+                "blood_group": "O+",
+                "conditions": "Atrial Fibrillation, Chronic Kidney Disease Stage 3",
+                "allergies": "Penicillin",
+                "surgeries": "None logged",
+                "medications": "Apixaban 5mg twice daily, Bisoprolol 5mg",
+                "mobility_status": "Ambulatory with caution",
+                "fall_history": "None",
+                "lifestyle": "Sedentary"
+            },
+            "contacts": [
+                {
+                    "name": "Guardian Monitor",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com"
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-107",
+            "risk_score": 45,
+            "status": "Monitor",
+            "vitals": {
+                "heartRate": 86,
+                "spo2": 96,
+                "temperature": 36.6,
+                "activity": "Walking",
+                "respirationRate": 16,
+                "radarHeartRate": 85,
+                "radarRespiration": 16
+            }
+        },
+        "sarla.devi@gmail.com": {
+            "id": "P008",
+            "email": "sarla.devi@gmail.com",
+            "profile": {
+                "id": "P008",
+                "name": "Sarla Devi",
+                "dob": "1958-01-01",
+                "age": 78,
+                "gender": "Female",
+                "phone": "+91 97788 99001",
+                "email": "sarla.devi@gmail.com",
+                "address": "Flat B-504, Valley View Apartments, Panvel",
+                "emergency_location": "Flat B-504, Valley View Apartments, Panvel",
+                "height": 163,
+                "weight": 58,
+                "bmi": 21.8,
+                "blood_group": "O+",
+                "conditions": "Mild Hypertension, Sarcopenia",
+                "allergies": "Codeine",
+                "surgeries": "None logged",
+                "medications": "Losartan 50mg morning, Vitamin D supplements",
+                "mobility_status": "Ambulatory, uses cane for balance",
+                "fall_history": "None",
+                "lifestyle": "Sedentary"
+            },
+            "contacts": [
+                {
+                    "name": "Guardian Monitor",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com"
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-108",
+            "risk_score": 18,
+            "status": "Stable",
+            "vitals": {
+                "heartRate": 70,
+                "spo2": 97,
+                "temperature": 36.3,
+                "activity": "Resting",
+                "respirationRate": 16,
+                "radarHeartRate": 69,
+                "radarRespiration": 16
+            }
+        },
+        "devendra.nath@gmail.com": {
+            "id": "P009",
+            "email": "devendra.nath@gmail.com",
+            "profile": {
+                "id": "P009",
+                "name": "Devendra Nath",
+                "dob": "1959-01-01",
+                "age": 85,
+                "gender": "Male",
+                "phone": "+91 98899 00112",
+                "email": "devendra.nath@gmail.com",
+                "address": "G-3, Silver Arch, Sector 2, Airoli",
+                "emergency_location": "G-3, Silver Arch, Sector 2, Airoli",
+                "height": 170,
+                "weight": 65,
+                "bmi": 22.5,
+                "blood_group": "O+",
+                "conditions": "Parkinson's Disease, Orthostatic Hypotension",
+                "allergies": "None",
+                "surgeries": "None logged",
+                "medications": "Levodopa/Carbidopa 100/25mg thrice daily",
+                "mobility_status": "High fall risk, uses walking frame",
+                "fall_history": "None",
+                "lifestyle": "Sedentary"
+            },
+            "contacts": [
+                {
+                    "name": "Guardian Monitor",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com"
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-109",
+            "risk_score": 94,
+            "status": "Critical",
+            "vitals": {
+                "heartRate": 98,
+                "spo2": 93,
+                "temperature": 36.8,
+                "activity": "Inactive",
+                "respirationRate": 16,
+                "radarHeartRate": 97,
+                "radarRespiration": 16
+            }
+        },
+        "meera.nair@gmail.com": {
+            "id": "P010",
+            "email": "meera.nair@gmail.com",
+            "profile": {
+                "id": "P010",
+                "name": "Meera Nair",
+                "dob": "1950-01-01",
+                "age": 69,
+                "gender": "Female",
+                "phone": "+91 99900 11223",
+                "email": "meera.nair@gmail.com",
+                "address": "C-12, Sea Breeze, Sector 19, Airoli",
+                "emergency_location": "C-12, Sea Breeze, Sector 19, Airoli",
+                "height": 169,
+                "weight": 74,
+                "bmi": 25.9,
+                "blood_group": "O+",
+                "conditions": "Hypothyroidism, Post-surgical knee stability",
+                "allergies": "Latex",
+                "surgeries": "None logged",
+                "medications": "Thyroxine 75mcg daily",
+                "mobility_status": "Ambulatory",
+                "fall_history": "None",
+                "lifestyle": "Sedentary"
+            },
+            "contacts": [
+                {
+                    "name": "Guardian Monitor",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com"
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-100",
+            "risk_score": 24,
+            "status": "Stable",
+            "vitals": {
+                "heartRate": 72,
+                "spo2": 98,
+                "temperature": 36.5,
+                "activity": "Resting",
+                "respirationRate": 16,
+                "radarHeartRate": 71,
+                "radarRespiration": 16
+            }
+        },
+        "null": {
+            "profile": {
+                "name": "Savita Sharma",
+                "dob": "1954-08-12",
+                "age": 72,
+                "gender": "Female",
+                "phone": "+91 98765 43210",
+                "email": "savita.sharma@gmail.com",
+                "address": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
+                "emergency_location": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
+                "height": 158.0,
+                "weight": 62.0,
+                "bmi": 24.8,
+                "blood_group": "O+",
+                "conditions": "Mild Hypertension, Post-Stroke mobility tracking",
+                "allergies": "Penicillin",
+                "surgeries": "Appendectomy (1998)",
+                "medications": "Amlodipine 5mg morning, Atorvastatin 10mg night",
+                "mobility_status": "Uses cane for outdoor walking",
+                "fall_history": "Mild trip in kitchen (Jan 2026)",
+                "lifestyle": "Sedentary, light garden walks"
+            },
+            "contacts": [
+                {
+                    "name": "Rahul Sharma",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com",
+                    "hospital": null
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-102",
+            "consent": {
+                "health_data": true,
+                "location": true,
+                "radar": true,
+                "camera": true,
+                "doctor_access": true,
+                "guardian_access": true,
+                "volunteer_access": true
+            }
+        }
+    },
+    "vitals_history": [],
+    "emergency_history": [],
+    "prescriptions": [
+        {
+            "id": "RX-889",
+            "doctor": "Dr. Arvind Swamy",
+            "date": "2026-08-21",
+            "medicine": "Amlodipine (5mg)",
+            "dosage": "1 tablet",
+            "frequency": "Once daily",
+            "duration": "30 days",
+            "instructions": "Take in morning before meals",
+            "status": "Active",
+            "email": "savita.sharma@gmail.com"
+        },
+        {
+            "id": "RX-890",
+            "doctor": "Dr. Arvind Swamy",
+            "date": "2026-08-21",
+            "medicine": "Atorvastatin (10mg)",
+            "dosage": "1 tablet",
+            "frequency": "Once daily",
+            "duration": "30 days",
+            "instructions": "Take at night before bed",
+            "status": "Active",
+            "email": "savita.sharma@gmail.com"
+        },
+        {
+            "id": "RX-889",
+            "doctor": "Dr. Arvind Swamy",
+            "date": "2026-08-22",
+            "medicine": "Amlodipine (5mg)",
+            "dosage": "1 tablet",
+            "frequency": "Once daily",
+            "duration": "30 days",
+            "instructions": "Take in morning before meals",
+            "status": "Active",
+            "email": "savita.sharma@gmail.com"
+        },
+        {
+            "id": "RX-890",
+            "doctor": "Dr. Arvind Swamy",
+            "date": "2026-08-22",
+            "medicine": "Atorvastatin (10mg)",
+            "dosage": "1 tablet",
+            "frequency": "Once daily",
+            "duration": "30 days",
+            "instructions": "Take at night before bed",
+            "status": "Active",
+            "email": "savita.sharma@gmail.com"
+        }
+    ],
+    "medication_adherence": {},
+    "audit_registry": [
+        {
+            "timestamp": 1787326021.377556,
+            "action": "Doctor logged in",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787326021.4644115,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787326081.69584,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787328972.189738,
+            "action": "Guardian logged in",
+            "guardian": "Rahul Sharma",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787328972.5293064,
+            "action": "Guardian viewed patient vitals",
+            "patient": "P001",
+            "guardian": "Rahul Sharma",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787328972.6834283,
+            "action": "Guardian viewed patient vitals",
+            "patient": "P001",
+            "guardian": "Rahul Sharma",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787329212.5754845,
+            "action": "Guardian logged in",
+            "guardian": "Rahul Sharma",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787329212.7963555,
+            "action": "Guardian viewed patient vitals",
+            "patient": "P001",
+            "guardian": "Rahul Sharma",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787329212.9537358,
+            "action": "Guardian viewed patient vitals",
+            "patient": "P001",
+            "guardian": "Rahul Sharma",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787329291.2901933,
+            "action": "Guardian viewed patient vitals",
+            "patient": "P001",
+            "guardian": "Rahul Sharma",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787329291.366122,
+            "action": "Guardian viewed patient vitals",
+            "patient": "P001",
+            "guardian": "Rahul Sharma",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787334800.6620529,
+            "action": "Doctor logged in",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787334800.8068674,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787334806.9163582,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787334806.941896,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787334806.9625475,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787334806.9825256,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787334840.4618502,
+            "action": "Viewed patient dashboard: Savita Sharma",
+            "patient": "P001",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787334851.7103918,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787343373.4965491,
+            "action": "Doctor logged in",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787343373.7155712,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        }
+    ],
+    "privacy_consent": [
+        {
+            "email": "savita.sharma@gmail.com",
+            "settings": {
+                "health_data": true,
+                "location": true,
+                "radar": true,
+                "camera": true,
+                "doctor_access": true,
+                "guardian_access": true,
+                "volunteer_access": true
+            }
+        },
+        {
+            "email": "savita.sharma@gmail.com",
+            "settings": {
+                "health_data": true,
+                "location": true,
+                "radar": true,
+                "camera": true,
+                "doctor_access": true,
+                "guardian_access": true,
+                "volunteer_access": true
+            }
+        }
+    ],
+    "devices": [
+        {
+            "email": "savita.sharma@gmail.com",
+            "device_id": "AEGIS-GATEWAY-102",
+            "status": "Connected"
+        },
+        {
+            "email": "savita.sharma@gmail.com",
+            "device_id": "AEGIS-GATEWAY-102",
+            "status": "Connected"
+        }
+    ],
+    "doctor_notes": [
+        {
+            "id": "N-01",
+            "patient_id": "P001",
+            "doctor_name": "Dr. Arvind Swamy",
+            "date": "2026-08-10",
+            "patient_visible": "Continue monitoring activity and attend follow-up.",
+            "private_note": "Activity deviation observed over last 48 hours. Heart rate variance within tolerance.",
+            "timestamp": 1787320000.0
+        }
+    ],
+    "appointments": [
+        {
+            "id": "A-01",
+            "patient_id": "P001",
+            "patient_name": "Savita Sharma",
+            "time": "09:30 AM",
+            "reason": "Follow-up Cardiology baseline validation",
+            "status": "Completed"
+        },
+        {
+            "id": "A-02",
+            "patient_id": "P002",
+            "patient_name": "Rajesh Kumar",
+            "time": "10:15 AM",
+            "reason": "Post-fall clinical safety assessment",
+            "status": "Completed"
+        }
+    ],
+    "fcm_tokens": {
+        "patient:P001": "fcm-mock-token-12345"
+    },
+    "notifications": [
+        {
+            "id": "NOTIF-51878A2A",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 SOS Alert",
+            "body": "Patient Savita Sharma has medical status and medical status risk.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1787334646.4532185,
+            "formatted_time": "23:20:46",
+            "metadata": {}
+        },
+        {
+            "id": "NOTIF-44F72FE3",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 Emergency SOS Alert",
+            "body": "Acute motion distress detected in LivingRoom. Clinical review recommended.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1787334806.770633,
+            "formatted_time": "23:23:26",
+            "metadata": {
+                "event_id": "EVT-SIM-D23DE8"
+            }
+        },
+        {
+            "id": "NOTIF-FE58B22B",
+            "role": "guardian",
+            "user_id": "all",
+            "type": "POSSIBLE_FALL",
+            "title": "\ud83d\udd34 Motion Anomaly Alert",
+            "body": "Possible fall detected for Savita Sharma in LivingRoom.",
+            "link": "/guardian/emergencies",
+            "critical": true,
+            "read": false,
+            "timestamp": 1787334806.7801785,
+            "formatted_time": "23:23:26",
+            "metadata": {
+                "event_id": "EVT-SIM-D23DE8"
+            }
+        },
+        {
+            "id": "NOTIF-8252DBAB",
+            "role": "volunteer",
+            "user_id": "all",
+            "type": "VOLUNTEER_ASSIGNED",
+            "title": "\ud83e\uddd1\u200d\u2695\ufe0f Emergency Dispatch Nearby",
+            "body": "Immediate community assistance required within 0.8km radius.",
+            "link": "/volunteer/emergencies",
+            "critical": true,
+            "read": false,
+            "timestamp": 1787334806.7907236,
+            "formatted_time": "23:23:26",
+            "metadata": {
+                "event_id": "EVT-SIM-D23DE8"
+            }
+        },
+        {
+            "id": "NOTIF-96D7343A",
+            "role": "volunteer",
+            "user_id": "all",
+            "type": "CARE_CREDITS_EARNED",
+            "title": "\u2764\ufe0f Care Credits Awarded",
+            "body": "You earned +25 Care Credits for completing community response mission.",
+            "link": "/volunteer/care-credits",
+            "critical": false,
+            "read": false,
+            "timestamp": 1787334806.8162262,
+            "formatted_time": "23:23:26",
+            "metadata": {
+                "credits": 25
+            }
+        },
+        {
+            "id": "NOTIF-B89E1AF7",
+            "role": "college",
+            "user_id": "all",
+            "type": "CERTIFICATE_ISSUED",
+            "title": "\ud83d\udcdc Verification Certificate Issued",
+            "body": "New community service certificate logged for volunteer Rahul Sharma.",
+            "link": "/college/certificates",
+            "critical": false,
+            "read": false,
+            "timestamp": 1787334806.824757,
+            "formatted_time": "23:23:26",
+            "metadata": {
+                "cert_id": "CERT-9B9035"
+            }
+        },
+        {
+            "id": "NOTIF-6571375F",
+            "role": "all",
+            "user_id": "all",
+            "type": "EMERGENCY_RESOLVED",
+            "title": "\u2705 Emergency Resolved",
+            "body": "Emergency dispatch EVT-SIM has been safely resolved by community first responder.",
+            "link": "/patient/emergency",
+            "critical": false,
+            "read": true,
+            "timestamp": 1787334806.8358998,
+            "formatted_time": "23:23:26",
+            "metadata": {
+                "event_id": "EVT-SIM-D23DE8"
+            }
+        },
+        {
+            "id": "NOTIF-D8181338",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 SOS Alert",
+            "body": "Patient Savita Sharma has medical status and medical status risk.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1787385190.8676016,
+            "formatted_time": "13:23:10",
+            "metadata": {}
+        },
+        {
+            "id": "NOTIF-B4024D13",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 SOS Alert",
+            "body": "Patient Savita Sharma has medical status and medical status risk.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1787385264.1903057,
+            "formatted_time": "13:24:24",
+            "metadata": {}
+        },
+        {
+            "id": "NOTIF-93202AE0",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 SOS Alert",
+            "body": "Patient Savita Sharma has medical status and medical status risk.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1787386025.9653559,
+            "formatted_time": "13:37:05",
+            "metadata": {}
+        },
+        {
+            "id": "NOTIF-562D916B",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 SOS Alert",
+            "body": "Patient Savita Sharma has medical status and medical status risk.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1787386224.0238566,
+            "formatted_time": "13:40:24",
+            "metadata": {}
+        },
+        {
+            "id": "NOTIF-0E4D1F27",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 SOS Alert",
+            "body": "Patient Savita Sharma has medical status and medical status risk.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1787386246.858203,
+            "formatted_time": "13:40:46",
+            "metadata": {}
+        }
+    ]
+}

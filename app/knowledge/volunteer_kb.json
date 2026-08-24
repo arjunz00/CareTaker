@@ -1,0 +1,26 @@
+[
+  {
+    "id": "vol_001",
+    "category": "dispatch_response",
+    "keywords": ["accept dispatch", "incident location", "proximity", "navigation", "eta", "volunteer response"],
+    "content": "When an SOS emergency is triggered nearby, registered Community Care Volunteers within a 1.5km radius receive dispatch notifications. Tap 'Accept Incident' to navigate directly to the patient's verified location."
+  },
+  {
+    "id": "vol_002",
+    "category": "first_aid_cpr",
+    "keywords": ["cpr", "first aid", "bleeding", "unconscious", "airway", "choking", "recovery position"],
+    "content": "Upon arriving at the scene: 1) Check responsiveness and breathing. 2) If non-responsive with no breathing, initiate chest compressions at 100-120 bpm (beat of 'Stayin Alive'). 3) Apply AED if available. 4) Position conscious fall victims carefully avoiding spinal rotation."
+  },
+  {
+    "id": "vol_003",
+    "category": "proof_of_care",
+    "keywords": ["proof of care", "verification", "qr code", "incident resolution", "completion"],
+    "content": "To log Proof of Care, scan the patient's verified QR code or confirm physical arrival in the Volunteer App. Log initial observation notes and transfer custody to arriving paramedics."
+  },
+  {
+    "id": "vol_004",
+    "category": "safety_deescalation",
+    "keywords": ["hazard", "safety", "false alarm", "cancel dispatch", "paramedic arrival"],
+    "content": "Ensure your personal safety before entering an unverified scene. If the incident is confirmed to be a false alarm or paramedics have taken over, mark the dispatch as 'Resolved - Paramedic Transfer'."
+  }
+]

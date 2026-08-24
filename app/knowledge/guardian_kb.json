@@ -1,0 +1,26 @@
+[
+  {
+    "id": "gdn_001",
+    "category": "remote_monitoring",
+    "keywords": ["monitoring", "vitals", "telemetry", "tracking", "status", "vitals check"],
+    "content": "Guardian dashboard displays live streaming telemetry from your family member's wearable AIoT sensors. Green status indicators signify stable vitals, amber indicates moderate risk variance, and red indicates an active emergency alert."
+  },
+  {
+    "id": "gdn_002",
+    "category": "emergency_alerts",
+    "keywords": ["alert", "notification", "fall detected", "heart anomaly", "sos active", "dispatch"],
+    "content": "When a fall or acute distress signal is detected, Guardians receive instantaneous high-priority alerts via WebSockets and SMS/push dispatches, showing exact GPS location and local volunteer assignment status."
+  },
+  {
+    "id": "gdn_003",
+    "category": "adherence_tracking",
+    "keywords": ["medicine adherence", "compliance", "missed dose", "schedule", "pills"],
+    "content": "The Prescription Adherence tracker shows morning, afternoon, and evening medication check-offs. If a dose is unconfirmed past 2 hours of the scheduled time, a gentle reminder prompt is sent to the primary guardian."
+  },
+  {
+    "id": "gdn_004",
+    "category": "privacy_access",
+    "keywords": ["privacy settings", "permissions", "consent", "view rights"],
+    "content": "Patient data visibility is governed by the patient's active Privacy Consent settings. Guardians can view health metrics permitted under the 'Family / Guardian Access' tier."
+  }
+]

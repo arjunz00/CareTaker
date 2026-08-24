@@ -1,0 +1,20 @@
+[
+  {
+    "id": "clg_001",
+    "category": "campus_monitoring",
+    "keywords": ["campus", "dorms", "student health", "aggregate telemetry", "cluster alert"],
+    "content": "The College Health Portal monitors aggregated, anonymized health telemetry across student housing dormitories. Sudden spikes in tachycardia or respiratory anomalies trigger campus health advisories."
+  },
+  {
+    "id": "clg_002",
+    "category": "campus_emergency_protocol",
+    "keywords": ["campus emergency", "security", "infirmary", "dorm SOS", "campus dispatch"],
+    "content": "In a campus medical emergency, dispatches route simultaneously to Campus Security, the Student Health Center Infirmary, and designated Resident Assistants (RAs)."
+  },
+  {
+    "id": "clg_003",
+    "category": "health_center_referral",
+    "keywords": ["referral", "infirmary appointment", "counseling", "student wellness"],
+    "content": "Students flagged with persistent high risk scores or medication non-compliance can be scheduled for confidential check-ins at the Campus Student Wellness Center."
+  }
+]
