@@ -69,7 +69,7 @@ export default function DoctorCard() {
             <img 
               src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400" 
               alt={doctor.name} 
-              className="w-13 h-13 rounded-2xl object-cover border border-slate-700 shadow-md"
+              className="w-12 h-12 rounded-2xl object-cover border border-slate-700 shadow-md"
             />
             <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-teal-500 border-2 border-slate-900 rounded-full flex items-center justify-center">
               <CheckCircle2 className="w-2.5 h-2.5 text-slate-950" />

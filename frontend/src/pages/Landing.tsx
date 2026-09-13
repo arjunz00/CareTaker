@@ -216,12 +216,12 @@ export default function Landing() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-stretch">
             {roles.map((r) => (
               <Link 
                 to={r.to} 
                 key={r.title} 
-                className="group relative rounded-3xl border border-slate-800 bg-slate-900 overflow-hidden hover:border-teal-500/50 hover:shadow-xl hover:shadow-teal-500/10 transition duration-300 flex flex-col justify-between"
+                className="group relative rounded-3xl border border-slate-800 bg-slate-900 overflow-hidden hover:border-teal-500/50 hover:shadow-xl hover:shadow-teal-500/10 transition duration-300 flex flex-col justify-between h-full"
               >
                 {/* Image Header */}
                 <div className="relative h-44 overflow-hidden">
