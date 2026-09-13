@@ -532,12 +532,12 @@
         },
         "null": {
             "profile": {
-                "name": "Savita Sharma",
+                "name": "Arjun Zore",
                 "dob": "1954-08-12",
                 "age": 72,
                 "gender": "Female",
                 "phone": "+91 98765 43210",
-                "email": "savita.sharma@gmail.com",
+                "email": "arjunzorekondiba00479@gmail.com",
                 "address": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
                 "emergency_location": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
                 "height": 158.0,
@@ -630,6 +630,54 @@
             "instructions": "Take at night before bed",
             "status": "Active",
             "email": "savita.sharma@gmail.com"
+        },
+        {
+            "id": "RX-889",
+            "doctor": "Dr. Arvind Swamy",
+            "date": "2026-09-13",
+            "medicine": "Amlodipine (5mg)",
+            "dosage": "1 tablet",
+            "frequency": "Once daily",
+            "duration": "30 days",
+            "instructions": "Take in morning before meals",
+            "status": "Active",
+            "email": "savita.sharma@gmail.com"
+        },
+        {
+            "id": "RX-890",
+            "doctor": "Dr. Arvind Swamy",
+            "date": "2026-09-13",
+            "medicine": "Atorvastatin (10mg)",
+            "dosage": "1 tablet",
+            "frequency": "Once daily",
+            "duration": "30 days",
+            "instructions": "Take at night before bed",
+            "status": "Active",
+            "email": "savita.sharma@gmail.com"
+        },
+        {
+            "id": "RX-889",
+            "doctor": "Dr. Arvind Swamy",
+            "date": "2026-09-13",
+            "medicine": "Amlodipine (5mg)",
+            "dosage": "1 tablet",
+            "frequency": "Once daily",
+            "duration": "30 days",
+            "instructions": "Take in morning before meals",
+            "status": "Active",
+            "email": "arjunzorekondiba00479@gmail.com"
+        },
+        {
+            "id": "RX-890",
+            "doctor": "Dr. Arvind Swamy",
+            "date": "2026-09-13",
+            "medicine": "Atorvastatin (10mg)",
+            "dosage": "1 tablet",
+            "frequency": "Once daily",
+            "duration": "30 days",
+            "instructions": "Take at night before bed",
+            "status": "Active",
+            "email": "arjunzorekondiba00479@gmail.com"
         }
     ],
     "medication_adherence": {},
@@ -766,6 +814,36 @@
             "action": "Viewed patient directory",
             "doctor": "Dr. Arvind Swamy",
             "status": "Success"
+        },
+        {
+            "timestamp": 1787558480.610244,
+            "action": "Doctor logged in",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787558480.7570093,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787558488.8201733,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787558495.3188567,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
+        },
+        {
+            "timestamp": 1787558508.0765684,
+            "action": "Viewed patient directory",
+            "doctor": "Dr. Arvind Swamy",
+            "status": "Success"
         }
     ],
     "privacy_consent": [
@@ -792,6 +870,30 @@
                 "guardian_access": true,
                 "volunteer_access": true
             }
+        },
+        {
+            "email": "savita.sharma@gmail.com",
+            "settings": {
+                "health_data": true,
+                "location": true,
+                "radar": true,
+                "camera": true,
+                "doctor_access": true,
+                "guardian_access": true,
+                "volunteer_access": true
+            }
+        },
+        {
+            "email": "arjunzorekondiba00479@gmail.com",
+            "settings": {
+                "health_data": true,
+                "location": true,
+                "radar": true,
+                "camera": true,
+                "doctor_access": true,
+                "guardian_access": true,
+                "volunteer_access": true
+            }
         }
     ],
     "devices": [
@@ -802,6 +904,16 @@
         },
         {
             "email": "savita.sharma@gmail.com",
+            "device_id": "AEGIS-GATEWAY-102",
+            "status": "Connected"
+        },
+        {
+            "email": "savita.sharma@gmail.com",
+            "device_id": "AEGIS-GATEWAY-102",
+            "status": "Connected"
+        },
+        {
+            "email": "arjunzorekondiba00479@gmail.com",
             "device_id": "AEGIS-GATEWAY-102",
             "status": "Connected"
         }
@@ -1017,6 +1129,62 @@
             "read": true,
             "timestamp": 1787386246.858203,
             "formatted_time": "13:40:46",
+            "metadata": {}
+        },
+        {
+            "id": "NOTIF-B8A55B09",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 SOS Alert",
+            "body": "Patient Savita Sharma has medical status and medical status risk.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1787558189.501093,
+            "formatted_time": "13:26:29",
+            "metadata": {}
+        },
+        {
+            "id": "NOTIF-C7482E00",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 SOS Alert",
+            "body": "Patient Savita Sharma has medical status and medical status risk.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1789299289.243075,
+            "formatted_time": "17:04:49",
+            "metadata": {}
+        },
+        {
+            "id": "NOTIF-DBCC9F78",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 SOS Alert",
+            "body": "Patient Savita Sharma has medical status and medical status risk.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1789299727.5081646,
+            "formatted_time": "17:12:07",
+            "metadata": {}
+        },
+        {
+            "id": "NOTIF-A148D35F",
+            "role": "doctor",
+            "user_id": "all",
+            "type": "EMERGENCY_DETECTED",
+            "title": "\ud83d\udea8 SOS Alert",
+            "body": "Patient Savita Sharma has medical status and medical status risk.",
+            "link": "/doctor/emergencies",
+            "critical": true,
+            "read": true,
+            "timestamp": 1789304045.3953044,
+            "formatted_time": "18:24:05",
             "metadata": {}
         }
     ]

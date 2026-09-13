@@ -10,9 +10,13 @@ import {
   EyeOff
 } from 'lucide-react';
 
+import { useAuth } from '../hooks/useAuth';
+
 export default function Register() {
   const [step, setStep] = useState(1);
   const navigate = useNavigate();
+  const { registerWithEmail } = useAuth();
+  const [password, setPassword] = useState('patient123');
 
   // Step 1: Personal Details
   const [profile, setProfile] = useState({
@@ -88,6 +92,9 @@ export default function Register() {
   const triggerRegister = async () => {
     setStep(6); // Show Loader / Ready screen
     try {
+      // 1. Create Firebase Auth user account
+      await registerWithEmail(profile.email, password, profile.name, 'patient');
+
       const payload = {
         profile: { ...profile, ...health },
         contacts,
@@ -95,29 +102,18 @@ export default function Register() {
         consent: privacy
       };
 
-      const res = await fetch("/api/patient/register", {
+      await fetch("/api/patient/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
-      });
+      }).catch(err => console.warn("Backend registration sync info:", err));
       
-      if (res.ok) {
-        // Auto-save session
-        const session = {
-          authenticated: true,
-          email: profile.email,
-          name: profile.name,
-          role: "patient",
-          token: "jwt-registration-token-mock"
-        };
-        localStorage.setItem("aegis_session", JSON.stringify(session));
-        setTimeout(() => {
-          navigate("/patient/dashboard");
-        }, 1500);
-      }
-    } catch (e) {
+      setTimeout(() => {
+        navigate("/patient/dashboard");
+      }, 1200);
+    } catch (e: any) {
       console.error("Failed to register profile baseline:", e);
-      alert("Registration failed. Please make sure the app server is online.");
+      alert(e?.message || "Registration failed. Please verify the credentials.");
       setStep(5);
     }
   };
@@ -198,6 +194,16 @@ export default function Register() {
                     className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 focus:outline-none focus:border-indigo-500 font-mono"
                   />
                 </div>
+              </div>
+              <div>
+                <label className="text-slate-400 block mb-1">Account Password (Firebase Auth)</label>
+                <input 
+                  type="password" 
+                  value={password} 
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Min 6 characters"
+                  className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 focus:outline-none focus:border-indigo-500 font-mono"
+                />
               </div>
               <div>
                 <label className="text-slate-400 block mb-1">Emergency Dispatch Location</label>

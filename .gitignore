@@ -50,3 +50,10 @@ dist/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Android Native Build
+frontend/android/.gradle/
+frontend/android/app/build/
+frontend/android/build/
+frontend/android/local.properties
+

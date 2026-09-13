@@ -2,17 +2,17 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { AlertOctagon } from 'lucide-react';
 import { useEmergency } from '../hooks/useEmergency';
+import { triggerNativeHaptics } from '../config/capacitor';
 
 export default function EmergencyButton() {
   const [holding, setHolding] = useState(false);
   const [progress, setProgress] = useState(0);
-  const timerRef = useRef<any>(null);
   const intervalRef = useRef<any>(null);
   const navigate = useNavigate();
   const location = useLocation();
   const { triggerSOS } = useEmergency();
 
-  // Hide the floating SOS button on the login/register/emergency views to prevent overlay clutter
+  // Hide floating SOS button on login/register/emergency views to prevent overlay clutter
   const hiddenRoutes = ["/patient/login", "/patient/register", "/patient/emergency"];
   const isHidden = hiddenRoutes.includes(location.pathname);
 
@@ -21,6 +21,9 @@ export default function EmergencyButton() {
     setHolding(true);
     setProgress(0);
     
+    // Trigger initial haptic feedback
+    triggerNativeHaptics('selection');
+
     const startTime = Date.now();
     const duration = 3000; // 3 seconds hold
 
@@ -44,6 +47,9 @@ export default function EmergencyButton() {
   const triggerActivation = () => {
     endHold();
     
+    // Trigger heavy native hardware haptic vibration
+    triggerNativeHaptics('notification');
+
     // Play sound feedback
     try {
       const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();

@@ -470,32 +470,36 @@ def login_patient(payload: Dict[str, str]):
 def get_patient_profile(email: str):
     patient = db_client.find_one("patients", {"email": email})
     if not patient:
-        # Return a mock default patient for demo mode if not registered
+        # Dynamically derive display name from email if not Savita demo
+        email_clean = email.strip()
+        user_part = email_clean.split("@")[0]
+        derived_name = " ".join([word.capitalize() for word in re.split(r'[._-]', user_part)]) if "savita" not in email_clean.lower() else "Savita Sharma"
+        
         return {
             "profile": {
-                "name": "Savita Sharma",
-                "dob": "1954-08-12",
-                "age": 72,
-                "gender": "Female",
+                "name": derived_name,
+                "dob": "1960-05-15",
+                "age": 66,
+                "gender": "Female" if "savita" in email_clean.lower() else "Patient",
                 "phone": "+91 98765 43210",
                 "email": email,
-                "address": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
-                "emergency_location": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
-                "height": 158.0,
-                "weight": 62.0,
+                "address": "Navi Mumbai, India",
+                "emergency_location": "Navi Mumbai, India",
+                "height": 162.0,
+                "weight": 65.0,
                 "bmi": 24.8,
                 "blood_group": "O+ (Positive)",
-                "conditions": "Mild Hypertension, Post-Stroke mobility tracking",
-                "allergies": "Penicillin",
-                "surgeries": "Appendectomy (1998)",
-                "medications": "Amlodipine 5mg morning, Atorvastatin 10mg night",
-                "mobility_status": "Uses cane for outdoor walking",
-                "fall_history": "Mild trip in kitchen (Jan 2026)",
-                "lifestyle": "Sedentary, light garden walks"
+                "conditions": "Hypertension monitoring, wellness tracking",
+                "allergies": "None recorded",
+                "surgeries": "None recorded",
+                "medications": "Amlodipine 5mg morning",
+                "mobility_status": "Independent",
+                "fall_history": "None recorded",
+                "lifestyle": "Active, regular walks"
             },
             "contacts": [
-                {"name": "Rahul Sharma", "relationship": "Son / Guardian", "phone": "+91 99887 76655", "email": "rahul.sharma@gmail.com"},
-                {"name": "Dr. Arvind Swamy", "relationship": "Primary Cardiologist", "phone": "+91 91234 56789", "email": "arvind.swamy@narayana.org", "hospital": "Narayana Health Clinic"}
+                {"name": "Emergency Guardian", "relationship": "Family Member", "phone": "+91 99887 76655", "email": "guardian@aegisnet.org"},
+                {"name": "Dr. Arvind Swamy", "relationship": "Attending Physician", "phone": "+91 91234 56789", "email": "arvind.swamy@narayana.org", "hospital": "Narayana Health Clinic"}
             ]
         }
     return patient

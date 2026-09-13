@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/auth/ProtectedRoute';
+
 import PatientLayout from './components/PatientLayout';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -67,107 +70,147 @@ import Landing from './pages/Landing';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        {/* Patient Authentication paths */}
-        <Route path="/patient/login" element={<Login />} />
-        <Route path="/patient/register" element={<Register />} />
-        
-        {/* Patient Console paths */}
-        <Route path="/patient" element={<PatientLayout />}>
-          <Route index element={<Navigate to="/patient/dashboard" replace />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="health" element={<Health />} />
-          <Route path="monitoring" element={<Monitoring />} />
-          <Route path="prescriptions" element={<Prescriptions />} />
-          <Route path="doctor" element={<Doctor />} />
-          <Route path="assistant" element={<Assistant />} />
-          <Route path="emergency" element={<Emergency />} />
-          <Route path="reports" element={<Reports />} />
-          <Route path="privacy" element={<Privacy />} />
-          <Route path="settings" element={<Settings />} />
-        </Route>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          
+          {/* Patient Authentication paths */}
+          <Route path="/patient/login" element={<Login />} />
+          <Route path="/patient/register" element={<Register />} />
+          
+          {/* Patient Console paths (Protected) */}
+          <Route
+            path="/patient"
+            element={
+              <ProtectedRoute allowedRoles={['patient']}>
+                <PatientLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="/patient/dashboard" replace />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="health" element={<Health />} />
+            <Route path="monitoring" element={<Monitoring />} />
+            <Route path="prescriptions" element={<Prescriptions />} />
+            <Route path="doctor" element={<Doctor />} />
+            <Route path="assistant" element={<Assistant />} />
+            <Route path="emergency" element={<Emergency />} />
+            <Route path="reports" element={<Reports />} />
+            <Route path="privacy" element={<Privacy />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
 
-        {/* Doctor Authentication paths */}
-        <Route path="/doctor/login" element={<DoctorLogin />} />
-        
-        {/* Doctor Console paths */}
-        <Route path="/doctor" element={<DoctorLayout />}>
-          <Route index element={<Navigate to="/doctor/dashboard" replace />} />
-          <Route path="dashboard" element={<DoctorDashboard />} />
-          <Route path="patients" element={<DoctorDashboard />} />
-          <Route path="patients/:patientId" element={<PatientDetail />} />
-          <Route path="emergencies" element={<DoctorEmergencies />} />
-          <Route path="assistant" element={<ClinicalAIWidget />} />
-          <Route path="appointments" element={<DoctorAppointments />} />
-          <Route path="prescriptions" element={<DoctorPrescriptions />} />
-          <Route path="notes" element={<DoctorNotes />} />
-          <Route path="reports" element={<DoctorReports />} />
-          <Route path="privacy" element={<DoctorPrivacy />} />
-          <Route path="settings" element={<DoctorSettings />} />
-        </Route>
+          {/* Doctor Authentication paths */}
+          <Route path="/doctor/login" element={<DoctorLogin />} />
+          
+          {/* Doctor Console paths (Protected) */}
+          <Route
+            path="/doctor"
+            element={
+              <ProtectedRoute allowedRoles={['doctor']}>
+                <DoctorLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="/doctor/dashboard" replace />} />
+            <Route path="dashboard" element={<DoctorDashboard />} />
+            <Route path="patients" element={<DoctorDashboard />} />
+            <Route path="patients/:patientId" element={<PatientDetail />} />
+            <Route path="emergencies" element={<DoctorEmergencies />} />
+            <Route path="assistant" element={<ClinicalAIWidget />} />
+            <Route path="appointments" element={<DoctorAppointments />} />
+            <Route path="prescriptions" element={<DoctorPrescriptions />} />
+            <Route path="notes" element={<DoctorNotes />} />
+            <Route path="reports" element={<DoctorReports />} />
+            <Route path="privacy" element={<DoctorPrivacy />} />
+            <Route path="settings" element={<DoctorSettings />} />
+          </Route>
 
-        {/* Guardian Authentication paths */}
-        <Route path="/guardian/login" element={<GuardianLogin />} />
+          {/* Guardian Authentication paths */}
+          <Route path="/guardian/login" element={<GuardianLogin />} />
 
-        {/* Guardian Console paths */}
-        <Route path="/guardian" element={<GuardianLayout />}>
-          <Route index element={<Navigate to="/guardian/dashboard" replace />} />
-          <Route path="dashboard" element={<GuardianDashboard />} />
-          <Route path="family" element={<FamilyList />} />
-          <Route path="patient/:patientId" element={<PatientDetailGuardian />} />
-          <Route path="health" element={<PatientDetailGuardian />} /> {/* default to detail summary health status */}
-          <Route path="risk" element={<RiskGuardian />} />
-          <Route path="emergencies" element={<EmergenciesGuardian />} />
-          <Route path="location" element={<LocationGuardian />} />
-          <Route path="care-team" element={<CareTeamGuardian />} />
-          <Route path="doctor-updates" element={<DoctorUpdatesGuardian />} />
-          <Route path="medications" element={<MedicationsGuardian />} />
-          <Route path="history" element={<HistoryGuardian />} />
-          <Route path="assistant" element={<AssistantGuardian />} />
-          <Route path="privacy" element={<PrivacyGuardian />} />
-          <Route path="notifications" element={<NotificationsGuardian />} />
-          <Route path="settings" element={<SettingsGuardian />} />
-        </Route>
+          {/* Guardian Console paths (Protected) */}
+          <Route
+            path="/guardian"
+            element={
+              <ProtectedRoute allowedRoles={['guardian']}>
+                <GuardianLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="/guardian/dashboard" replace />} />
+            <Route path="dashboard" element={<GuardianDashboard />} />
+            <Route path="family" element={<FamilyList />} />
+            <Route path="patient/:patientId" element={<PatientDetailGuardian />} />
+            <Route path="health" element={<PatientDetailGuardian />} />
+            <Route path="risk" element={<RiskGuardian />} />
+            <Route path="emergencies" element={<EmergenciesGuardian />} />
+            <Route path="location" element={<LocationGuardian />} />
+            <Route path="care-team" element={<CareTeamGuardian />} />
+            <Route path="doctor-updates" element={<DoctorUpdatesGuardian />} />
+            <Route path="medications" element={<MedicationsGuardian />} />
+            <Route path="history" element={<HistoryGuardian />} />
+            <Route path="assistant" element={<AssistantGuardian />} />
+            <Route path="privacy" element={<PrivacyGuardian />} />
+            <Route path="notifications" element={<NotificationsGuardian />} />
+            <Route path="settings" element={<SettingsGuardian />} />
+          </Route>
 
-        {/* Volunteer Community Response Console */}
-        <Route path="/volunteer/login" element={<VolunteerLogin />} />
-        <Route path="/volunteer/register" element={<VolunteerRegister />} />
-        <Route path="/volunteer" element={<VolunteerLayout />}>
-          <Route index element={<Navigate to="/volunteer/dashboard" replace />} />
-          <Route path="dashboard" element={<VolunteerDashboard />} />
-          <Route path="emergencies" element={<VolunteerEmergencies />} />
-          <Route path="emergencies/:id" element={<VolunteerEmergencyDetail />} />
-          <Route path="assistant" element={<VolunteerAssistant />} />
-          <Route path="profile" element={<VolunteerResourcePage page="profile" />} />
-          <Route path="verification" element={<VolunteerResourcePage page="verification" />} />
-          <Route path="map" element={<VolunteerResourcePage page="map" />} />
-          <Route path="assignments" element={<VolunteerResourcePage page="assignments" />} />
-          <Route path="training" element={<VolunteerResourcePage page="training" />} />
-          <Route path="care-credits" element={<VolunteerResourcePage page="care-credits" />} />
-          <Route path="certificates" element={<VolunteerResourcePage page="certificates" />} />
-          <Route path="impact" element={<VolunteerResourcePage page="impact" />} />
-          <Route path="history" element={<VolunteerResourcePage page="history" />} />
-          <Route path="notifications" element={<VolunteerResourcePage page="notifications" />} />
-          <Route path="privacy" element={<VolunteerResourcePage page="privacy" />} />
-          <Route path="settings" element={<VolunteerResourcePage page="settings" />} />
-        </Route>
+          {/* Volunteer Community Response Console (Protected) */}
+          <Route path="/volunteer/login" element={<VolunteerLogin />} />
+          <Route path="/volunteer/register" element={<VolunteerRegister />} />
+          <Route
+            path="/volunteer"
+            element={
+              <ProtectedRoute allowedRoles={['volunteer']}>
+                <VolunteerLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="/volunteer/dashboard" replace />} />
+            <Route path="dashboard" element={<VolunteerDashboard />} />
+            <Route path="emergencies" element={<VolunteerEmergencies />} />
+            <Route path="emergencies/:id" element={<VolunteerEmergencyDetail />} />
+            <Route path="assistant" element={<VolunteerAssistant />} />
+            <Route path="profile" element={<VolunteerResourcePage page="profile" />} />
+            <Route path="verification" element={<VolunteerResourcePage page="verification" />} />
+            <Route path="map" element={<VolunteerResourcePage page="map" />} />
+            <Route path="assignments" element={<VolunteerResourcePage page="assignments" />} />
+            <Route path="training" element={<VolunteerResourcePage page="training" />} />
+            <Route path="care-credits" element={<VolunteerResourcePage page="care-credits" />} />
+            <Route path="certificates" element={<VolunteerResourcePage page="certificates" />} />
+            <Route path="impact" element={<VolunteerResourcePage page="impact" />} />
+            <Route path="history" element={<VolunteerResourcePage page="history" />} />
+            <Route path="notifications" element={<VolunteerResourcePage page="notifications" />} />
+            <Route path="privacy" element={<VolunteerResourcePage page="privacy" />} />
+            <Route path="settings" element={<VolunteerResourcePage page="settings" />} />
+          </Route>
 
-        {/* College / institution administration */}
-        <Route path="/college/login" element={<CollegeLogin />} />
-        <Route path="/college" element={<CollegeLayout />}>
-          <Route index element={<Navigate to="/college/dashboard" replace />} />
-          <Route path="dashboard" element={<CollegeDashboard />} />
-          <Route path="assistant" element={<CollegeAssistant />} />
-          <Route path="students" element={<CollegeResourcePage page="students" />} />
-          <Route path="students/:id" element={<StudentDetail />} />
-          {['verification','volunteers','training','missions','care-credits','certificates','programs','impact','reports','notifications','audit','privacy','profile','settings'].map(page => <Route key={page} path={page} element={<CollegeResourcePage page={page} />} />)}
-        </Route>
+          {/* College / institution administration (Protected) */}
+          <Route path="/college/login" element={<CollegeLogin />} />
+          <Route
+            path="/college"
+            element={
+              <ProtectedRoute allowedRoles={['college']}>
+                <CollegeLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="/college/dashboard" replace />} />
+            <Route path="dashboard" element={<CollegeDashboard />} />
+            <Route path="assistant" element={<CollegeAssistant />} />
+            <Route path="students" element={<CollegeResourcePage page="students" />} />
+            <Route path="students/:id" element={<StudentDetail />} />
+            {['verification','volunteers','training','missions','care-credits','certificates','programs','impact','reports','notifications','audit','privacy','profile','settings'].map(page => (
+              <Route key={page} path={page} element={<CollegeResourcePage page={page} />} />
+            ))}
+          </Route>
 
-        {/* Default fallback redirects */}
-        <Route path="*" element={<Navigate to="/patient/login" replace />} />
-      </Routes>
-    </BrowserRouter>
+          {/* Default fallback redirects */}
+          <Route path="*" element={<Navigate to="/patient/login" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }

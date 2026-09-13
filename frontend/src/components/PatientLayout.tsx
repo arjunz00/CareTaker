@@ -1,42 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Outlet, useNavigate, useLocation, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Outlet, useLocation, Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import TopBar from './TopBar';
 import EmergencyButton from './EmergencyButton';
+import { useAuth } from '../hooks/useAuth';
 import { 
   LayoutDashboard, 
   Activity, 
   User, 
   Heart, 
-  MessageSquare,
-  AlertTriangle 
+  MessageSquare 
 } from 'lucide-react';
 
 export default function PatientLayout() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-  const [session, setSession] = useState<{ email: string; name: string } | null>(null);
-  const navigate = useNavigate();
+  const { session, loading } = useAuth();
   const location = useLocation();
 
-  useEffect(() => {
-    const sessionStr = localStorage.getItem("aegis_session");
-    if (!sessionStr) {
-      navigate("/patient/login");
-      return;
-    }
-    try {
-      const s = JSON.parse(sessionStr);
-      if (!s.authenticated || s.role !== 'patient') {
-        navigate("/patient/login");
-        return;
-      }
-      setSession(s);
-    } catch (e) {
-      navigate("/patient/login");
-    }
-  }, [navigate]);
-
-  if (!session) {
+  if (loading) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center font-sans">
         <div className="flex flex-col items-center gap-3">
@@ -67,8 +48,9 @@ export default function PatientLayout() {
       {/* Main content pane */}
       <div className="flex-1 flex flex-col overflow-hidden relative pb-16 md:pb-0">
         <TopBar 
-          userName={session.name} 
-          userEmail={session.email} 
+          userName={session?.name} 
+          userEmail={session?.email} 
+          userAvatar={session?.photoURL}
           isOnline={true} 
           onToggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)}
         />

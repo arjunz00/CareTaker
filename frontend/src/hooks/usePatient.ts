@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { useAuth } from './useAuth';
 
 export interface PatientProfileData {
   name: string;
@@ -20,6 +21,7 @@ export interface PatientProfileData {
   mobility_status?: string;
   fall_history?: string;
   lifestyle?: string;
+  avatar?: string;
 }
 
 export interface EmergencyContact {
@@ -31,24 +33,17 @@ export interface EmergencyContact {
 }
 
 export function usePatient() {
+  const { session } = useAuth();
   const [profile, setProfile] = useState<PatientProfileData | null>(null);
   const [contacts, setContacts] = useState<EmergencyContact[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const getEmail = () => {
-    const sessionStr = localStorage.getItem("aegis_session");
-    if (sessionStr) {
-      try {
-        return JSON.parse(sessionStr).email;
-      } catch (e) {
-        return "savita.sharma@gmail.com";
-      }
-    }
-    return "savita.sharma@gmail.com";
-  };
+  const getEmail = useCallback(() => {
+    return session?.email || "savita.sharma@gmail.com";
+  }, [session]);
 
-  const fetchProfile = async () => {
+  const fetchProfile = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
@@ -56,14 +51,24 @@ export function usePatient() {
       const res = await fetch(`/api/patient/profile?email=${encodeURIComponent(email)}`);
       if (!res.ok) throw new Error("Failed to load patient profile.");
       const data = await res.json();
-      setProfile(data.profile);
+      
+      const loadedProfile: PatientProfileData = {
+        ...data.profile,
+        // Prioritize authenticated session name & email if logged in via Google/Email
+        name: session?.name && session.name !== "User" ? session.name : (data.profile?.name || "Patient User"),
+        email: session?.email || data.profile?.email || email,
+        phone: session?.phone || data.profile?.phone || "+91 98765 43210",
+        avatar: session?.photoURL || undefined
+      };
+
+      setProfile(loadedProfile);
       setContacts(data.contacts || []);
     } catch (err: any) {
       setError(err.message || "An error occurred");
     } finally {
       setLoading(false);
     }
-  };
+  }, [getEmail, session]);
 
   const updateProfile = async (updatedProfile: PatientProfileData) => {
     try {
@@ -84,7 +89,7 @@ export function usePatient() {
 
   useEffect(() => {
     fetchProfile();
-  }, []);
+  }, [fetchProfile]);
 
   return {
     profile,
