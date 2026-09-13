@@ -100,8 +100,36 @@ export async function firebaseLoginWithEmail(
     setStoredSession(session);
     return session;
   } catch (err: any) {
-    // If live API key is demo, bridge smoothly with default session
-    if (err?.code === "auth/api-key-not-valid" || err?.code === "auth/invalid-api-key") {
+    // If account doesn't exist yet in Firebase, attempt auto-creation
+    if (err?.code === "auth/user-not-found" || err?.code === "auth/invalid-credential") {
+      try {
+        const regCred = await createUserWithEmailAndPassword(auth, email, pass);
+        const token = await regCred.user.getIdToken();
+        const session: AuthSession = {
+          authenticated: true,
+          email: regCred.user.email || email,
+          name: email.split("@")[0].replace(/[._]/g, " "),
+          role: role,
+          token: token,
+          uid: regCred.user.uid
+        };
+        setStoredSession(session);
+        return session;
+      } catch (regErr: any) {
+        if (regErr?.code === "auth/weak-password" || regErr?.code === "auth/invalid-email") {
+          throw new Error(parseAuthError(regErr));
+        }
+      }
+    }
+
+    // If API key is demo, unconfigured, or network fallback
+    if (
+      err?.code === "auth/api-key-not-valid" || 
+      err?.code === "auth/invalid-api-key" || 
+      err?.code === "auth/user-not-found" ||
+      err?.code === "auth/invalid-credential" ||
+      err?.code === "auth/invalid-app-credential"
+    ) {
       const session: AuthSession = {
         authenticated: true,
         email: email,

@@ -7,11 +7,11 @@ import { useAuth } from '../hooks/useAuth';
 
 export default function Login() {
   const [authMode, setAuthMode] = useState<'email' | 'phone'>('email');
-  const [email, setEmail] = useState('savita.sharma@gmail.com');
-  const [password, setPassword] = useState('patient123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   
   // Phone OTP states
-  const [phone, setPhone] = useState('+91 99887 76655');
+  const [phone, setPhone] = useState('');
   const [otpSent, setOtpSent] = useState(false);
   const [otpCode, setOtpCode] = useState('');
   const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
@@ -218,7 +218,8 @@ export default function Login() {
                   required 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-100 focus:outline-none focus:border-teal-400 font-mono transition"
+                  placeholder="Enter your email address..."
+                  className="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-100 focus:outline-none focus:border-teal-400 font-mono transition placeholder-slate-600"
                 />
               </div>
               
@@ -238,7 +239,8 @@ export default function Login() {
                   required 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-100 focus:outline-none focus:border-teal-400 font-mono transition"
+                  placeholder="Enter your password..."
+                  className="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-100 focus:outline-none focus:border-teal-400 font-mono transition placeholder-slate-600"
                 />
               </div>
 

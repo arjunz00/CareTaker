@@ -532,12 +532,61 @@
         },
         "null": {
             "profile": {
-                "name": "Arjun Zore",
+                "name": "Savita Sharma",
                 "dob": "1954-08-12",
                 "age": 72,
                 "gender": "Female",
                 "phone": "+91 98765 43210",
-                "email": "arjunzorekondiba00479@gmail.com",
+                "email": "savita.sharma@gmail.com",
+                "address": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
+                "emergency_location": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
+                "height": 158.0,
+                "weight": 62.0,
+                "bmi": 24.8,
+                "blood_group": "O+",
+                "conditions": "Mild Hypertension, Post-Stroke mobility tracking",
+                "allergies": "Penicillin",
+                "surgeries": "Appendectomy (1998)",
+                "medications": "Amlodipine 5mg morning, Atorvastatin 10mg night",
+                "mobility_status": "Uses cane for outdoor walking",
+                "fall_history": "Mild trip in kitchen (Jan 2026)",
+                "lifestyle": "Sedentary, light garden walks"
+            },
+            "contacts": [
+                {
+                    "name": "Rahul Sharma",
+                    "relationship": "Son / Guardian",
+                    "phone": "+91 99887 76655",
+                    "email": "rahul.sharma@gmail.com",
+                    "hospital": null
+                },
+                {
+                    "name": "Dr. Arvind Swamy",
+                    "relationship": "Primary Cardiologist",
+                    "phone": "+91 91234 56789",
+                    "email": "arvind.swamy@narayana.org",
+                    "hospital": "Narayana Health Clinic"
+                }
+            ],
+            "device_id": "AEGIS-GATEWAY-102",
+            "consent": {
+                "health_data": true,
+                "location": true,
+                "radar": true,
+                "camera": true,
+                "doctor_access": true,
+                "guardian_access": true,
+                "volunteer_access": true
+            }
+        },
+        "null": {
+            "profile": {
+                "name": "Arjun Zore",
+                "dob": "1954-08-12",
+                "age": 72,
+                "gender": "Male",
+                "phone": "+91 98765 43210",
+                "email": "arjunzorekondiba0044479@gmail.com",
                 "address": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
                 "emergency_location": "B-402, Seawoods Towers, Sector 40, Navi Mumbai",
                 "height": 158.0,
@@ -678,6 +727,30 @@
             "instructions": "Take at night before bed",
             "status": "Active",
             "email": "arjunzorekondiba00479@gmail.com"
+        },
+        {
+            "id": "RX-889",
+            "doctor": "Dr. Arvind Swamy",
+            "date": "2026-09-13",
+            "medicine": "Amlodipine (5mg)",
+            "dosage": "1 tablet",
+            "frequency": "Once daily",
+            "duration": "30 days",
+            "instructions": "Take in morning before meals",
+            "status": "Active",
+            "email": "arjunzorekondiba0044479@gmail.com"
+        },
+        {
+            "id": "RX-890",
+            "doctor": "Dr. Arvind Swamy",
+            "date": "2026-09-13",
+            "medicine": "Atorvastatin (10mg)",
+            "dosage": "1 tablet",
+            "frequency": "Once daily",
+            "duration": "30 days",
+            "instructions": "Take at night before bed",
+            "status": "Active",
+            "email": "arjunzorekondiba0044479@gmail.com"
         }
     ],
     "medication_adherence": {},
@@ -894,6 +967,18 @@
                 "guardian_access": true,
                 "volunteer_access": true
             }
+        },
+        {
+            "email": "arjunzorekondiba0044479@gmail.com",
+            "settings": {
+                "health_data": true,
+                "location": true,
+                "radar": true,
+                "camera": true,
+                "doctor_access": true,
+                "guardian_access": true,
+                "volunteer_access": true
+            }
         }
     ],
     "devices": [
@@ -914,6 +999,11 @@
         },
         {
             "email": "arjunzorekondiba00479@gmail.com",
+            "device_id": "AEGIS-GATEWAY-102",
+            "status": "Connected"
+        },
+        {
+            "email": "arjunzorekondiba0044479@gmail.com",
             "device_id": "AEGIS-GATEWAY-102",
             "status": "Connected"
         }
@@ -1171,20 +1261,6 @@
             "read": true,
             "timestamp": 1789299727.5081646,
             "formatted_time": "17:12:07",
-            "metadata": {}
-        },
-        {
-            "id": "NOTIF-A148D35F",
-            "role": "doctor",
-            "user_id": "all",
-            "type": "EMERGENCY_DETECTED",
-            "title": "\ud83d\udea8 SOS Alert",
-            "body": "Patient Savita Sharma has medical status and medical status risk.",
-            "link": "/doctor/emergencies",
-            "critical": true,
-            "read": true,
-            "timestamp": 1789304045.3953044,
-            "formatted_time": "18:24:05",
             "metadata": {}
         }
     ]

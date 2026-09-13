@@ -4,8 +4,8 @@ import { Heart, Lock, ShieldCheck, Mail, ArrowRight } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
 export default function VolunteerLogin() {
-  const [email, setEmail] = useState('rahul.volunteer@aegisnet.demo');
-  const [password, setPassword] = useState('volunteer123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -65,7 +65,8 @@ export default function VolunteerLogin() {
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               required
-              className="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-white font-mono text-xs focus:outline-none focus:border-indigo-500 transition"
+              placeholder="volunteer@community.org"
+              className="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-white font-mono text-xs focus:outline-none focus:border-indigo-500 transition placeholder-slate-600"
             />
           </div>
 
@@ -78,7 +79,8 @@ export default function VolunteerLogin() {
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               required
-              className="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-white font-mono text-xs focus:outline-none focus:border-indigo-500 transition"
+              placeholder="Enter your password..."
+              className="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-white font-mono text-xs focus:outline-none focus:border-indigo-500 transition placeholder-slate-600"
             />
           </div>
         </div>
@@ -107,7 +109,7 @@ export default function VolunteerLogin() {
         </button>
 
         <div className="text-center text-[11px] text-slate-400">
-          <Link className="text-indigo-400 font-bold hover:underline" to="/volunteer/register">Apply to volunteer</Link> · Demo credentials prefilled
+          <Link className="text-indigo-400 font-bold hover:underline" to="/volunteer/register">Apply to volunteer</Link>
         </div>
 
         <p className="border-t border-slate-800 pt-4 flex gap-2 text-[10px] text-slate-500 leading-relaxed">

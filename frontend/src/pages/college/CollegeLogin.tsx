@@ -4,8 +4,8 @@ import { Building2, Lock, ArrowRight } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
 export default function CollegeLogin() {
-  const [email, setEmail] = useState('admin@examplemedical.edu');
-  const [password, setPassword] = useState('college123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -65,7 +65,8 @@ export default function CollegeLogin() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-white font-mono text-xs focus:outline-none focus:border-indigo-500 transition"
+              placeholder="admin@medical.edu"
+              className="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-white font-mono text-xs focus:outline-none focus:border-indigo-500 transition placeholder-slate-600"
             />
           </div>
 
@@ -78,7 +79,8 @@ export default function CollegeLogin() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-white font-mono text-xs focus:outline-none focus:border-indigo-500 transition"
+              placeholder="Enter your password..."
+              className="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-white font-mono text-xs focus:outline-none focus:border-indigo-500 transition placeholder-slate-600"
             />
           </div>
         </div>
